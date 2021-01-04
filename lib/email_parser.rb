@@ -14,7 +14,10 @@ class EmailAddressParser
   def parse
     address_array = @email_addresses.split(/[, ]/)
     if address_array.include?("")
-      address_array = address_array.
+      address_array.delete("")
+      address_array
+    else
+      address_array
   end
   
 end
