@@ -15,9 +15,9 @@ class EmailAddressParser
     address_array = @email_addresses.split(/[, ]/)
     if address_array.include?("")
       address_array.delete("")
-      address_array
+      address_array.uniq
     else
-      address_array
+      address_array.uniq
     end
   end
   
