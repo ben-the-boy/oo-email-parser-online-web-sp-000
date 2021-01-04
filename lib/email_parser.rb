@@ -12,12 +12,7 @@ class EmailAddressParser
   end
   
   def parse
-    if @email_addresses.include?(",")
-      address_array = @email_addresses.split(", ")
-    else
-      address_array = @email_addresses.split(" ")
-    end
-    address_array
+    address_array = @email_addresses.split()
   end
   
 end
