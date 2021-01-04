@@ -4,6 +4,7 @@
 # or whitespace (' ').
 
 class EmailAddressParser
+  
   attr_accessor :email_addresses
   
   def initialize(email_addresses)
@@ -11,6 +12,8 @@ class EmailAddressParser
   end
   
   def parse
+    address_array = @email_addresses.split(/, /)
+    address_array
   end
   
 end
